@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.391">
+    <testcase classname="Register_User_Functionality" name="TC01_register_user" time="0.136">
+        <system-out>
+            <![CDATA[When user launches the browser..............................................passed
+And user navigates to home page.............................................passed
+Then user verifies home page is visible.....................................passed
+Then user clicks on signup button...........................................passed
+Then user verifies new user signup is visible...............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register_User_Functionality" name="TC01_signup_user" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[When user enters name and email.............................................undefined
+And user clicks signup button...............................................skipped
+And user verifies that enter account information is visible.................skipped
+And user fills details......................................................skipped
+And user selects checkbox signup for our newslater..........................skipped
+And user selects checkbox receive special offers............................skipped
+And user fills details......................................................skipped
+And user clicks create account button.......................................skipped
+Then user verifies that acount is created...................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Register_User_Functionality" name="TC01_delete_account" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[When user clicks continue button............................................undefined
+And user verifies that logged in............................................skipped
+And user clicks delete account button.......................................skipped
+Then user verifies that acount deleted......................................skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>
