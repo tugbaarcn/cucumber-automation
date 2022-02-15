@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@login_user_excel_negative",
+        tags = "@create_account_with_existing_email",
         dryRun = false
 )
 

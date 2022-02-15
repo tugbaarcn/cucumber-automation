@@ -9,13 +9,10 @@ import utilities.Driver;
 
 public class MainPageFunctionalities {
 
-
     public MainPageFunctionalities() {
 
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-
     @FindBy (partialLinkText = "Signup")
     public WebElement signupButton;
 
@@ -34,5 +31,6 @@ public class MainPageFunctionalities {
     @FindBy(xpath = "//b[contains (text(),'Enter Account Information')]")
     public WebElement createAccountPageVerification;
 
-
+    @FindBy(xpath="(//p)[1]")
+    public WebElement existingEmailVerification;
 }
