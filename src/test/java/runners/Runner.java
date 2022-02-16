@@ -13,13 +13,13 @@ import org.junit.runner.RunWith;
 //                "junit:target/xml-report/cucumber.xml",
 //                //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 //                "rerun:target/failedRerun.txt"
+//
 //        },
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@create_account_with_existing_email",
+        tags = "@verify_all_products",
         dryRun = false
 )
-
 public class Runner {
 }
