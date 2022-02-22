@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@verify_all_products",
+        tags = "@place_order_login_before_checkout",
         dryRun = false
 )
 public class Runner {
