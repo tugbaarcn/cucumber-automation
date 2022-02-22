@@ -44,4 +44,3 @@ public class ProductsPage {
     @FindBy (xpath = "//b[contains(text(),'Brand')]")
     public WebElement Brand;
 }
-
