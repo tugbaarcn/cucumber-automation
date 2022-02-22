@@ -17,7 +17,7 @@ public class FillDetailsStepDefs {
     public void user_fills_details() {
 
         fillDetailsPage.genderBox.click();
-        fillDetailsPage.passwodBox.sendKeys("123456");
+        fillDetailsPage.passwodBox.sendKeys("1245865");
         Driver.selectByIndex(fillDetailsPage.dayDropdown,4);
         Driver.selectByIndex(fillDetailsPage.monthDropdown,3);
         Driver.selectByIndex(fillDetailsPage.yearDropdown,27);

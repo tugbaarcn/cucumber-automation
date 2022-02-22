@@ -28,6 +28,4 @@ public class TC2_LoginPage {
 
     @FindBy(xpath = "(//p)[1]")
     public WebElement negativeLoginText;
-
-
 }

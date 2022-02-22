@@ -1,6 +1,7 @@
 package utilities;
 
 import org.apache.poi.ss.usermodel.*;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelUtil {
+
     private Workbook workBook;
     private Sheet workSheet;
     private String path;
@@ -40,7 +42,7 @@ public class ExcelUtil {
             Map<String, String> rowMap = new HashMap<String, String>();
             for (Cell cell :row) {
                 int columnIndex = cell.getColumnIndex();
-                rowMap.put(columns.get(columnIndex), cell.toString());
+                rowMap.put(columns.get(columnIndex).trim(), cell.toString().trim());
             }
             data.add(rowMap);
         }
@@ -120,5 +122,4 @@ public class ExcelUtil {
         }
         return data;
     }
-
 }

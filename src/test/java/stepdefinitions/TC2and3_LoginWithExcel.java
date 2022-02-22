@@ -12,41 +12,35 @@ import java.util.Map;
 
 public class TC2and3_LoginWithExcel {
 
-    ExcelUtil excelUtil;
-    List<Map<String, String>> loginData;
     TC2_LoginPage loginStepDefs=new TC2_LoginPage();
+    String path="./src/test/resources/testdata/Book1.xlsx";
+    String sheetName= "Sheet1";
+    ExcelUtil excelUtil=new ExcelUtil(path,sheetName);
+    List<Map<String, String>> loginData=excelUtil.getDataList();
 
     @When("user enters correct email_address and password via excel")
     public void user_enters_correct_email_address_and_password_via_excel() {
-        String path="./src/test/resources/testdata/Book1.xlsx";
-        String sheetName= "Sayfa2";
-        excelUtil=new ExcelUtil(path,sheetName);
-        loginData=excelUtil.getDataList();
 
-//        System.out.println(loginData.get(0).get("email"));
-//        System.out.println(loginData.get(0).get("password"));
+//    String path="./src/test/resources/testdata/Book1.xlsx";
+//    String sheetName= "Sheet1";
+//    excelUtil=new ExcelUtil(path,sheetName);
+//    loginData=excelUtil.getDataList();
 
-        loginStepDefs.emailBox.sendKeys(loginData.get(0).get("email"));
-        loginStepDefs.passwordBox.sendKeys(loginData.get(0).get("password"));
+        loginStepDefs.emailBox.sendKeys(loginData.get(0).get("Email"));
+        loginStepDefs.passwordBox.sendKeys(loginData.get(0).get("Password"));
+
     }
 
     @And("user enters wrong email_address and password via excel")
     public void userEntersWrongEmail_addressAndPasswordViaExcel() {
 
-        String path="./src/test/resources/testdata/Book1.xlsx";
-        String sheetName= "Sayfa2";
-        excelUtil=new ExcelUtil(path,sheetName);
-        loginData=excelUtil.getDataList();
-
-        loginStepDefs.emailBox.sendKeys(loginData.get(1).get("email"));
-        loginStepDefs.passwordBox.sendKeys(loginData.get(1).get("password"));
-
+        loginStepDefs.emailBox.sendKeys(loginData.get(2).get("Email"));
+        loginStepDefs.passwordBox.sendKeys(loginData.get(2).get("Password"));
     }
 
     @Then("user verifies that invalid login text is visible")
     public void userVerifiesThatInvalidLoginTextIsVisible() {
 
-     Assert.assertTrue(loginStepDefs.negativeLoginText.isDisplayed());
-
+        Assert.assertTrue(loginStepDefs.negativeLoginText.isDisplayed());
     }
 }
