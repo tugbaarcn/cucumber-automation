@@ -10,16 +10,15 @@ public class RemoveProductsPage {
     public RemoveProductsPage() {
 
         PageFactory.initElements(Driver.getDriver(),this);
+
     }
 
     @FindBy(xpath = "//a[@class='cart_quantity_delete']" )
     public WebElement deleteButton;
 
-    @FindBy(xpath="//*[@class='fa fa-times']")
+    @FindBy(xpath = "//*[@class='fa fa-times']")
     public WebElement deleteButton2;
 
     @FindBy(xpath = "//*[text()='Cart is empty!']")
     public  WebElement cartEmptyText;
-
-
 }

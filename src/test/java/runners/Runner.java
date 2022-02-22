@@ -18,8 +18,8 @@ import org.junit.runner.RunWith;
 
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@remove_product",
-        dryRun = false
+        tags = "@view_category_products",
+        dryRun = true
 )
 public class Runner {
 }
