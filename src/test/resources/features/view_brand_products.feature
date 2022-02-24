@@ -1,6 +1,7 @@
-Feature: @brands_products
-
 @brands_products
+Feature:TC19_ViewAndCartBrandProducts
+
+
 Scenario: TC19_ViewAndCartBrandProducts
   When user launches the browser
   And user navigates to home page
